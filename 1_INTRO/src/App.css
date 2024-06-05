@@ -36,3 +36,73 @@
     transform: rotate(360deg);
   }
 }
+
+body.home nav a#home,
+body.linguagem nav a#linguagem,
+body.banco nav a#banco,
+body.tendencias nav a#tendencias,
+body.seguranca nav a#seguranca,
+body.quiz nav a#quiz {
+    color: #fff;
+    background: #1c189b;
+    cursor: text;
+}
+
+header {
+  width: 750px;
+  margin: 0 auto;
+
+}
+
+/* Topo da pagina */
+section {
+  height: 150px;
+  background-repeat: no-repeat;
+  background-position: right;
+  padding-top: 25px;
+  /* border: 1px solid red; */
+}
+
+.logo {
+  width: 180px;
+  height: 80px;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-indent: -3000px;
+}
+/* Barra de navegação */
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+}
+/* Topo ul */
+section ul {
+  margin-top: 20px;
+  background: #77a0d1;
+  float: left;
+}
+/* Topo ul li */
+section ul li {
+  float: left;
+}
+/* topo ul a */
+section ul a {
+  font-size: 0.9em;
+  display: block;
+  padding: 0.5em 1.5em;
+  line-height: 2.1em;
+  text-decoration: none;
+  color: #fff;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+/* topo */
+section ul .primeiro a {
+  background: none;
+}
+/* topo */
+section ul a:hover {
+  color: #1e1b69;
+}
