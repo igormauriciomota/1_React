@@ -1,4 +1,5 @@
 // Components
+import Challenge from './components/Challenge';
 import Events from './components/Events';
 import FirstComponents from './components/FirstComponents';
 import MyComponent from './components/MyComponent';
@@ -6,6 +7,7 @@ import TemplateExpressions from './components/TemplateExpressions';
 
 // styles / css
 import './App.css';
+
 
 
 function App() {
@@ -18,6 +20,7 @@ function App() {
       <TemplateExpressions/>
       <MyComponent/>
       <Events/>
+      <Challenge/>
 
       {/* Fim do Projeto */}
     </div>
