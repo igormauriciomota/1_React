@@ -1,9 +1,12 @@
 // Components
+import Events from './components/Events';
 import FirstComponents from './components/FirstComponents';
+import MyComponent from './components/MyComponent';
 import TemplateExpressions from './components/TemplateExpressions';
 
 // styles / css
 import './App.css';
+
 
 function App() {
   return (
@@ -13,7 +16,8 @@ function App() {
       <h1>Fundamentos React</h1>
       <FirstComponents/>
       <TemplateExpressions/>
-
+      <MyComponent/>
+      <Events/>
 
       {/* Fim do Projeto */}
     </div>
