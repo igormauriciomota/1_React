@@ -1,3 +1,7 @@
+// Components
+import FirstComponents from './components/FirstComponents';
+
+// styles / css
 import './App.css';
 
 function App() {
@@ -5,6 +9,7 @@ function App() {
     <div className="App">
       {/* Inicio do Projeto */}
       <h1>Fundamentos React</h1>
+      <FirstComponents/>
       {/* Fim do Projeto */}
     </div>
   );
