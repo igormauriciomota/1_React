@@ -1,6 +1,7 @@
 import './App.css';
 
 import leao from './assets/leao.png';
+import ListRender from './components/ListRender';
 import ManageData from './components/ManageData';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         </div>
       </div>
       <ManageData/>
+      <ListRender/>
       {/* Fim do Projeto */}
     </div>
   );
