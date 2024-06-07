@@ -1,6 +1,7 @@
 import './App.css';
 
 import leao from './assets/leao.png';
+import ManageData from './components/ManageData';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <img src={leao} alt="leao" />
         </div>
       </div>
+      <ManageData/>
       {/* Fim do Projeto */}
     </div>
   );

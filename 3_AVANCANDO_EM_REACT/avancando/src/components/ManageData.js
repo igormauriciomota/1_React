@@ -1,13 +1,20 @@
 import React from 'react';
 
 const ManageData = () => {
-    const someData = 10;
+    let someData = 10;
+
+    console.log(someData);
 
   return (
 
     <div>
         <div>
             <p>Valor: {someData}</p>
+            <button onClick={() =>
+                someData = 15
+            }
+            >
+                Mudar variavel</button>
         </div>
     </div>
 
