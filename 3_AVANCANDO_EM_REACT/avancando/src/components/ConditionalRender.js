@@ -3,7 +3,7 @@ import { useState } from "react";
 const ConditionalRender = () => {
     const [x] = useState(false);
 
-    const [name] = useState("João");
+    const [name, setName] = useState("Igor");
 
     return (
     <div>
@@ -17,9 +17,10 @@ const ConditionalRender = () => {
             </div>
         ) : (
             <div>
-                <p>Nome não encontrado</p>
+                <p>Nome não encontrado!</p>
             </div>
         )}
+        <button onClick={() => setName("João")}>Clica aqui!</button>
     </div>
     );
 };
