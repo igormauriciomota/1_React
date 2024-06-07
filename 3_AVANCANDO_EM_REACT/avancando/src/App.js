@@ -1,5 +1,7 @@
 import './App.css';
 
+import leao from './assets/leao.png';
+
 function App() {
   return (
     <div className="App">
@@ -10,6 +12,10 @@ function App() {
         {/* Imagem em public */}
         <div>
           <img src="/Genesis.png" alt="Genesis" />
+        </div>
+        {/* Imagem em asset */}
+        <div>
+          <img src={leao} alt="leao" />
         </div>
       </div>
       {/* Fim do Projeto */}
