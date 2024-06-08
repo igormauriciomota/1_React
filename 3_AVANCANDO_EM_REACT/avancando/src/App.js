@@ -32,8 +32,8 @@ function App() {
       <ConditionalRender />
       {/* props / componente pode usar tambem o name={userName} ou name={name}*/}
       <ShowUserName name={userName} />
-      {/* Constructor */}
-      <CarDetails />
+      {/* destructuring MyComponent({name, age}) */}
+      <CarDetails brand="VW" km={1000} color="Azul" />
       {/* Fim do Projeto */}
     </div>
   );
