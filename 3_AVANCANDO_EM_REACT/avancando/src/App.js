@@ -33,7 +33,10 @@ function App() {
       {/* props / componente pode usar tambem o name={userName} ou name={name}*/}
       <ShowUserName name={userName} />
       {/* destructuring MyComponent({name, age}) */}
-      <CarDetails brand="VW" km={1000} color="Azul" />
+      <CarDetails brand="VW" km={1000} color="Azul" newCar={false} />
+      {/* Reaproveitamento de props */}
+      <CarDetails brand="Ford" color="vermelho" km={0} newCar={true} />
+      <CarDetails brand="Fiat" color="Branco" km={4500} newCar={false} />
       {/* Fim do Projeto */}
     </div>
   );
