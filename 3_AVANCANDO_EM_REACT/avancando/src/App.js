@@ -1,11 +1,17 @@
+import { useState } from 'react';
 import './App.css';
 
 import leao from './assets/leao.png';
+import CarDetails from './components/CarDetails';
 import ConditionalRender from './components/ConditionalRender';
 import ListRender from './components/ListRender';
 import ManageData from './components/ManageData';
+import ShowUserName from './components/ShowUserName';
 
 function App() {
+  const name = "Igor Mota";
+  const [userName] = useState("Maria");
+
   return (
     <div className="App">
       {/* Inicio Projeto */}
@@ -21,9 +27,13 @@ function App() {
           <img src={leao} alt="leao" />
         </div>
       </div>
-      <ManageData/>
-      <ListRender/>
-      <ConditionalRender/>
+      <ManageData />
+      <ListRender />
+      <ConditionalRender />
+      {/* props / componente pode usar tambem o name={userName} ou name={name}*/}
+      <ShowUserName name={userName} />
+      {/* Constructor */}
+      <CarDetails />
       {/* Fim do Projeto */}
     </div>
   );
