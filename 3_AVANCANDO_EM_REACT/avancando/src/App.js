@@ -4,12 +4,13 @@ import './App.css';
 import leao from './assets/leao.png';
 import CarDetails from './components/CarDetails';
 import ConditionalRender from './components/ConditionalRender';
+import Fragment from './components/Fragment';
 import ListRender from './components/ListRender';
 import ManageData from './components/ManageData';
 import ShowUserName from './components/ShowUserName';
 
+
 function App() {
-  const name = "Igor Mota";
   const [userName] = useState("Maria");
 
   //Array lista de carros, props.
@@ -53,7 +54,8 @@ function App() {
         newCar={car.newCar} 
         />
       ))}
-
+    {/* Fim de loop */}
+    <Fragment propFragment="teste" />
 
       {/* Fim do Projeto */}
     </div>
