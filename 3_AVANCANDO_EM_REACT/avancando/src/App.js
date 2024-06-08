@@ -12,6 +12,13 @@ function App() {
   const name = "Igor Mota";
   const [userName] = useState("Maria");
 
+  //Array lista de carros, props.
+  const cars = [
+    {id: 1, brand: "Ferrari", color: "Amarelo", newCar: true, km: 0 },
+    {id: 2, brand: "Kia", color: "Branco", newCar: false, km: 4500 },
+    {id: 3, brand: "Renault", color: "Azul", newCar: false, km: 6500 },
+  ];
+
   return (
     <div className="App">
       {/* Inicio Projeto */}
@@ -37,6 +44,17 @@ function App() {
       {/* Reaproveitamento de props */}
       <CarDetails brand="Ford" color="vermelho" km={0} newCar={true} />
       <CarDetails brand="Fiat" color="Branco" km={4500} newCar={false} />
+      {/* loop em array de objetos */}
+      {cars.map((car) => (
+        <CarDetails
+        brand={car.brand}
+        color={car.color}
+        km={car.km}
+        newCar={car.newCar} 
+        />
+      ))}
+
+
       {/* Fim do Projeto */}
     </div>
   );
