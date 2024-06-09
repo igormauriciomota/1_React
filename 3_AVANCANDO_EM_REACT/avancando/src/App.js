@@ -4,6 +4,7 @@ import './App.css';
 import leao from './assets/leao.png';
 import CarDetails from './components/CarDetails';
 import ConditionalRender from './components/ConditionalRender';
+import Container from './components/Container';
 import Fragment from './components/Fragment';
 import ListRender from './components/ListRender';
 import ManageData from './components/ManageData';
@@ -51,12 +52,17 @@ function App() {
         brand={car.brand}
         color={car.color}
         km={car.km}
-        newCar={car.newCar} 
+        newCar={car.newCar}
         />
       ))}
     {/* Fim de loop */}
     <Fragment propFragment="teste" />
-
+    
+    {/* Children */}
+        <Container>
+          <p> E este e o conteudo</p>
+        </Container>
+    
       {/* Fim do Projeto */}
     </div>
   );
