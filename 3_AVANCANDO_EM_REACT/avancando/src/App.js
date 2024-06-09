@@ -5,6 +5,7 @@ import leao from './assets/leao.png';
 import CarDetails from './components/CarDetails';
 import ConditionalRender from './components/ConditionalRender';
 import Container from './components/Container';
+import ExecuteFunction from './components/ExecuteFunction';
 import Fragment from './components/Fragment';
 import ListRender from './components/ListRender';
 import ManageData from './components/ManageData';
@@ -20,6 +21,11 @@ function App() {
     {id: 2, brand: "Kia", color: "Branco", newCar: false, km: 4500 },
     {id: 3, brand: "Renault", color: "Azul", newCar: false, km: 6500 },
   ];
+
+  function showMessage() {
+    console.log("Evento do componete pai");
+  }
+
 
   return (
     <div className="App">
@@ -49,6 +55,7 @@ function App() {
       {/* loop em array de objetos */}
       {cars.map((car) => (
         <CarDetails
+        key={car.id}
         brand={car.brand}
         color={car.color}
         km={car.km}
@@ -65,8 +72,18 @@ function App() {
         <Container myValue="testing 2">
           <h5>Testando o container</h5>
         </Container>
+    {/* Executar função */}
+        <ExecuteFunction myFunction={showMessage} />
+
+
+
+
+
+
+
+
     
-      {/* Fim do Projeto */}
+    {/* ----------Fim do Projeto----------- */}
     </div>
   );
 }
