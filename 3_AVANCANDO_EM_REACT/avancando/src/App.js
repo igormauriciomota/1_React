@@ -3,12 +3,14 @@ import './App.css';
 
 import leao from './assets/leao.png';
 import CarDetails from './components/CarDetails';
+import ChangeMessageState from './components/ChangeMessageState';
 import ConditionalRender from './components/ConditionalRender';
 import Container from './components/Container';
 import ExecuteFunction from './components/ExecuteFunction';
 import Fragment from './components/Fragment';
 import ListRender from './components/ListRender';
 import ManageData from './components/ManageData';
+import Message from './components/Message';
 import ShowUserName from './components/ShowUserName';
 
 
@@ -21,11 +23,17 @@ function App() {
     {id: 2, brand: "Kia", color: "Branco", newCar: false, km: 4500 },
     {id: 3, brand: "Renault", color: "Azul", newCar: false, km: 6500 },
   ];
-
+  //Funçoes em props
   function showMessage() {
     console.log("Evento do componete pai");
   }
+// Elevação de state
+  const [message, setMessage] = useState("");
 
+  const handleMessage = (msg) => {
+    setMessage(msg);
+  };
+// fim Message
 
   return (
     <div className="App">
@@ -74,6 +82,10 @@ function App() {
         </Container>
     {/* Executar função */}
         <ExecuteFunction myFunction={showMessage} />
+    {/* State lift - Elevação de state */}
+    <Message msg={message} />
+    <ChangeMessageState handleMessage={handleMessage}/>
+
 
 
 
