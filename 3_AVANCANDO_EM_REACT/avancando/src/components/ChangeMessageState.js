@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ChangeMessageState = ({handleMessage}) => {
-    const messages = ["oi", "Ola", "Tudo bem?"];
+    const messages = ["Oi", "Ola", "Tudo bem?"];
 
     return (
         <div>

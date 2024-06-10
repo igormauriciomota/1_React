@@ -12,12 +12,13 @@ import ListRender from './components/ListRender';
 import ManageData from './components/ManageData';
 import Message from './components/Message';
 import ShowUserName from './components/ShowUserName';
+import UserDetails from './components/UserDetails';
 
 
 function App() {
   const [userName] = useState("Maria");
 
-  //Array lista de carros, props.
+  //Array lista de carros, props (CarDetails.js).
   const cars = [
     {id: 1, brand: "Ferrari", color: "Amarelo", newCar: true, km: 0 },
     {id: 2, brand: "Kia", color: "Branco", newCar: false, km: 4500 },
@@ -27,7 +28,7 @@ function App() {
   function showMessage() {
     console.log("Evento do componete pai");
   }
-// Elevação de state
+// Elevação de state / controlado pelo elemento pai
   const [message, setMessage] = useState("");
 
   const handleMessage = (msg) => {
@@ -35,6 +36,15 @@ function App() {
   };
 // fim Message
 
+// ----Exercicio Array usuarios (UserDatails.js)---
+const users = [
+  {id: 1, name: "Matheus", job: "Programador", age: 31},
+  {id: 2, name: "Maria", job: "Estudante", age: 17},
+  {id: 3, name: "Igor", job: "Programador", age: 39},
+  {id: 3, name: "Barbara", job: "Admidistrativo", age: 37},
+];
+
+//Fim exercicio
   return (
     <div className="App">
       {/* Inicio Projeto */}
@@ -83,8 +93,19 @@ function App() {
     {/* Executar função */}
         <ExecuteFunction myFunction={showMessage} />
     {/* State lift - Elevação de state */}
+    {/* Elemento que consome o estado pai */}
     <Message msg={message} />
+    {/* Componete que altera o estado e eleva,  */}
     <ChangeMessageState handleMessage={handleMessage}/>
+    {/* Exercicio Array */}
+    {users.map((user) => (
+      <UserDetails
+      key={user.id}
+      name={user.name}
+      job={user.job}
+      age={user.age}
+      />
+    ))}
 
 
 
