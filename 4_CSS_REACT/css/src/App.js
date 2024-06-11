@@ -2,11 +2,13 @@ import './App.css';
 import MyComponents from './components/MyComponents';
 
 import { useState } from "react";
+import Titles from './components/Titles';
 
 function App() {
   const n = 15
   const [name] = useState("Igor");
 
+  //Classe dinamica com css
   const redTitle = true;
 
 
@@ -40,6 +42,8 @@ function App() {
       <h2 className={redTitle ? "red-title" : "title" }>
         Este titulo vai ter classe dinamica
       </h2>
+      {/* CSS Modules */}
+      <Titles />
 
 
 
