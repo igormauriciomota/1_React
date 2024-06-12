@@ -8,11 +8,13 @@ const MyForm = () => {
   const [email, setEmail] = useState()
 
   // teremos uma função referente a gerenciamento de dados 3
+  //exemplo setName
   const handleName = (e) => {
     setName(e.target.value);
   };
 
   console.log(name);
+  console.log(email);
 
 
   return (
@@ -26,7 +28,8 @@ const MyForm = () => {
             {/* 2 - label envolvendo input */}
             <label>
                 <span>E-mail</span>
-                <input type="text" name="email" placeholder="Digite o seu e-mail"/>
+                <input type="text" name="email" placeholder="Digite o seu e-mail"
+                onChange={(e) => setEmail(e.target.value)} />
             </label>
             <input type="submit" value="Enviar" />
         </form>
