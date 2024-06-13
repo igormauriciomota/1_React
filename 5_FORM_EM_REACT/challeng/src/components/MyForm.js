@@ -5,11 +5,12 @@ import { useState } from 'react';
 const MyForm = ({user}) => {
   // 6 - Controlled inputs
 
-
-
   // 3 - gerenciamento de dados
   const [name, setName] = useState(user ? user.name : '');
   const [email, setEmail] = useState(user ? user.email : '');
+
+  {/* 8 - funçao do textarea */}
+  const [bio, setBio] = useState("");
 
   // teremos uma função referente a gerenciamento de dados 3
   //exemplo setName
@@ -24,11 +25,12 @@ const MyForm = ({user}) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log("Enviando o formulario");
-    console.log(name, email);
+    console.log(name, email, bio);
 
     // 7 - Limpar form
     setName("");
     setEmail("");
+    setBio("");
   };
 
 
@@ -50,6 +52,11 @@ const MyForm = ({user}) => {
                 <input type="text" name="email" placeholder="Digite o seu e-mail"
                 onChange={(e) => setEmail(e.target.value)} value={email}
                 />
+            </label>
+            {/* 8 - textarea */}
+            <label>
+              <span>Bio:</span>
+              <textarea name="bio" placeholder='Descrição do usuário' onChange={(e) => setBio(e.target.value)} value={bio}></textarea>
             </label>
             <input type="submit" value="Enviar" />
         </form>
