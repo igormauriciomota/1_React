@@ -6,7 +6,7 @@ function App() {
     <div className="App">
     {/* Inicio Formulario */}
       <h2>Formulario</h2>
-      <MyForm />
+      <MyForm user={{name: "Josias", email: "josias@gmail.com"}} />
 
 
     {/* Fim form */}
